@@ -5,9 +5,7 @@ class Gnuplot <Formula
   @homepage='http://www.gnuplot.info/'
   @md5='c10468d74030e8bed0fd6865a45cf1fd'
   
-  def deps
-  	LibraryDep.new 'gnuplot'
-  end
+  depends_on 'readline'
 
   def install
     system "./configure", "--prefix=#{prefix}", "--disable-debug", "--disable-dependency-tracking", "--with-readline=#{prefix}/lib"

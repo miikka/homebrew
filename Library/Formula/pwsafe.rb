@@ -5,9 +5,7 @@ class Pwsafe <Formula
   @homepage='http://nsd.dyndns.org/pwsafe/'
   @md5='4bb36538a2772ecbf1a542bc7d4746c0'
 
-  def deps
-    LibraryDep.new 'readline'
-  end
+  depends_on 'readline'
 
   def install
     system "./configure", "--prefix=#{prefix}", "--disable-debug", "--disable-dependency-tracking", "--with-readline=#{prefix}/lib"
